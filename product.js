@@ -1,0 +1,18 @@
+var products = [
+  { id: 1,  name: "Kamatis",      emoji: "🍅", price: 35,  unit: "per kilo" },
+  { id: 2,  name: "Sibuyas",      emoji: "🧅", price: 60,  unit: "per kilo" },
+  { id: 3,  name: "Bawang",       emoji: "🧄", price: 90,  unit: "per kilo" },
+  { id: 4,  name: "Patatas",      emoji: "🥔", price: 50,  unit: "per kilo" },
+  { id: 5,  name: "Kalabasa",     emoji: "🎃", price: 30,  unit: "per kilo" },
+  { id: 6,  name: "Ampalaya",     emoji: "🥒", price: 55,  unit: "per piraso" },
+  { id: 7,  name: "Kangkong",     emoji: "🥬", price: 15,  unit: "per ikat" },
+  { id: 8,  name: "Sitaw",        emoji: "🫘", price: 40,  unit: "per ikat" },
+  { id: 9,  name: "Okra",         emoji: "🫑", price: 45,  unit: "per kilo" },
+  { id: 10, name: "Repolyo",      emoji: "🥦", price: 40,  unit: "per ulo" },
+  { id: 11, name: "Pechay",       emoji: "🥬", price: 20,  unit: "per ikat" },
+  { id: 12, name: "Talong",       emoji: "🍆", price: 50,  unit: "per kilo" },
+  { id: 13, name: "Labanos",      emoji: "🌿", price: 25,  unit: "per piraso" },
+  { id: 14, name: "Upo",          emoji: "🥗", price: 20,  unit: "per piraso" },
+  { id: 15, name: "Mais",         emoji: "🌽", price: 25,  unit: "per piraso" },
+  { id: 16, name: "Camote",       emoji: "🍠", price: 35,  unit: "per kilo" },
+];
