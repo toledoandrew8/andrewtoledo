@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gulay ni Aling Rosa 🌿</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">🥬</span>
+        <div>
+          <h1 class="brand-name">Gulay ni Aling Rosa</h1>
+          <p class="brand-tagline">Sariwang gulay mula sa palengke!</p>
+        </div>
+      </div>
+      <button class="cart-toggle-btn" id="cartToggleBtn" onclick="toggleCart()">
+        🛒 Basket
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- Product Section -->
+    <section class="products-section">
+      <h2 class="section-title">🌾 Mga Sariwang Gulay</h2>
+
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Hanapin ang gulay..." oninput="filterProducts()" />
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Products rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cartSidebar">
+      <h2 class="cart-title">🛒 Aking Basket</h2>
+
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart-msg" id="emptyMsg">Wala pang laman ang basket mo! 😊</p>
+      </div>
+
+      <div class="cart-summary" id="cartSummary" style="display:none;">
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="subtotal">&#8369;0.00</span>
+        </div>
+        <div class="summary-row discount-row" id="discountRow" style="display:none;">
+          <span>Diskwento:</span>
+          <span id="discountAmt" class="discount-text">-&#8369;0.00</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>Kabuuan:</span>
+          <span id="totalPrice">&#8369;0.00</span>
+        </div>
+
+        <div class="promo-section">
+          <input type="text" id="promoInput" placeholder="Promo code: DISKWENTO10" />
+          <button onclick="applyPromo()">I-apply</button>
+        </div>
+
+        <button class="checkout-btn" onclick="checkout()">
+          &#10003; Mag-order na!
+        </button>
+        <button class="clear-btn" onclick="clearCart()">
+          &#128465; Alisin Lahat
+        </button>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Order Success Modal -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-icon">&#127881;</div>
+      <h2>Salamat sa iyong order!</h2>
+      <p id="modalMessage"></p>
+      <button onclick="closeModal()">Bumalik sa tindahan</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
